@@ -5,14 +5,20 @@ description: Workshop template for an introduction to the Julia programming lang
 
 [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-Short summary about the workshop.
+This workshop is an **introduction to the Julia programming language.**
+
+It covers how to:
+
+- Variables and Types
+  - Numeric variables and math operations
+  - Boolean variables
+  - Strings
+  - Container types
 
 !!! success "Prerequisites"
 
-    This workshop does PLACEHOLDER and PLACEHOLDER.
-    We recommend users being familiar with PLACEHOLDER, especially PLACEHOLDER.
-
-    The formal requirements are the PLACEHOLDER WORKSHOP WITH LINK.
+    This workshop provides an introduction to the Julia programming language with a focus on functional programming 
+    Familiarity with programming concepts will be helpful but not required.
 
 ## Schedule
 
@@ -27,9 +33,7 @@ please send an email to <training@pumas.ai>.
 
 ## Authors
 
-- Author 1 - <email@example.com>
-- Author 2 - <email@example.com>
-- Author 3 - <email@example.com>
+- Juan José González Oneto - <j.oneto@pumas.ai>
 
 ## License
 
