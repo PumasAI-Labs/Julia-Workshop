@@ -17,7 +17,7 @@ It covers how to:
 
 !!! success "Prerequisites"
 
-    This workshop provides an introduction to the Julia programming language with a focus on functional programming 
+    This workshop provides an introduction to the Julia programming language with a focus on functional programming. 
     Familiarity with programming concepts will be helpful but not required.
 
 ## Schedule
