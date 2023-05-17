@@ -1,6 +1,6 @@
 ---
-title: Pumas-AI Workshop PLACEHOLDER
-description: CHANGE ME.
+title: Pumas-AI Julia Workshop 
+description: Workshop template for an introduction to the Julia programming language. Covers variables and types, syntax, functions and functional programming
 ---
 
 [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)

@@ -1,5 +1,5 @@
 ---
-title: Code of Conduct for Pumas-AI Workshop PLACEHOLDER
+title: Code of Conduct for Pumas-AI Julia Workshop
 description: Participants and Instructors must follow this at all times.
 ---
 
