@@ -22,9 +22,15 @@ It covers how to:
 
 ## Schedule
 
-| Time (HH:MM) | Activity | Description                              |
-| ------------ | -------- | ---------------------------------------- |
-| 00:00        | Setup    | Download files required for the workshop |
+### Part 1: variables and types
+
+| Time (HH:MM) | Activity                    | Description                               |
+|--------------|-----------------------------|-------------------------------------------|
+| 00:00        | Setup                       | Download files required for the workshop  |
+| 00:05        | Numeric variables and math  | Showcase `01-variables/01-numeric.jl`     |
+| 00:10        | Boolean variables           | Showcase `01-variables/02-booleans.jl`    |
+| 00:15        | Strings                     | Showcase `01-variables/03-strings.jl`     |
+| 00:20        | Containers                  | Showcase `02-variabbles/04-containers.jl` |
 
 ## Get in touch
 
