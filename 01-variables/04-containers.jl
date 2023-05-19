@@ -16,7 +16,7 @@ A2 = [1 2 3; 4 5 6; 7 8 9]
 A == A2
 
 ## Reshaping a vector
-reshape([1, 2, 3, 4, 5, 6, 7, 8, 9], (3, 3))
+reshape([1, 2, 3, 4, 5, 6, 7, 8, 9], (3, 3)) # Not the same as before, Julia is column-major
 
 # Indexing
 ## Vectors
@@ -25,7 +25,7 @@ string_vector[begin] # Equivalent to [1]
 
 ## Matrices
 A[1, 2] # A[row, column]
-A2[begin, 3]
+A[begin, 3]
 
 ## Slicing
 numeric[1:3]

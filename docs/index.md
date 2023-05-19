@@ -13,7 +13,7 @@ It covers how to:
   - Numeric variables and math operations
   - Boolean variables
   - Strings
-  - Container types
+  - Containers
 
 !!! success "Prerequisites"
 

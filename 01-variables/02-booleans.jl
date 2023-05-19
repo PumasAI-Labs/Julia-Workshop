@@ -22,4 +22,4 @@ true && false
 # Tip: boolean values can be used for math (true = 1, false = 0)
 true + true
 one + true
-(y > 6)*x
+(x > 6)*x
