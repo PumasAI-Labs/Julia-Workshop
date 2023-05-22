@@ -5,15 +5,13 @@ description: Workshop template for an introduction to the Julia programming lang
 
 [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-This workshop is an **introduction to the Julia programming language.**
+This workshop is an **introduction to the Julia programming language,** covering the following topics:
 
-It covers how to:
-
-- Variables and Types
-  - Numeric variables and math operations
-  - Boolean variables
-  - Strings
-  - Containers
+- **Variables and types:**
+    - Numeric variables and math operations
+    - Boolean variables
+    - Strings
+    - Containers
 
 !!! success "Prerequisites"
 
