@@ -28,6 +28,7 @@ greeting*", "*name # Watch out: + doesn't work
 
 ### Tip: you can place more complicated expressions inside of $()
 "One plus two is equal to $(1 + 2)"
+"One plus two is equal to $(abs(-4) - 1)" # Using functions (abs for absolute value)
 
 # Pattern matching
 contains("banana", "ana") # Check if "ana" is in "banana"
