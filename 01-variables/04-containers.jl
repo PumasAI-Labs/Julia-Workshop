@@ -49,3 +49,8 @@ height = Dict(
 ## Retrieving values
 height["Bob"] # Get Bob's height
 height["Alice"] # Get Alice's height
+
+## Changing and adding values
+height["Bob"] = 175 # Now Bob's height is 175 (not 178)
+height["Peter"] = 173 # Add Peter and set his height as 173
+height # Check the changes
