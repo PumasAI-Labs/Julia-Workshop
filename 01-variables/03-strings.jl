@@ -13,7 +13,7 @@ Quisque mollis suscipit tincidunt. Morbi vulputate libero ex,
 quis maximus nunc rutrum non.
 """
 
-# Join strings
+# String concatenation
 greeting = "Hello"
 name = "Jake"
 
