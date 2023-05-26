@@ -34,6 +34,9 @@ greeting*", "*name # Watch out: + doesn't work
 contains("banana", "ana") # Check if "ana" is in "banana"
 occursin("ana", "banana")
 
+startswith("banana", "ban") # Check if "banana" starts with "ban"
+endswith("banana", "ana") # Check if "banana" ends with "ana"
+
 # Formatting
 sample_text = "This is an example"
 
