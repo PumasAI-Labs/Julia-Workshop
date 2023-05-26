@@ -27,7 +27,7 @@ typeof(one_float)
 
 ## Math operations
 x + y # Addition
-x - y # Substraction
+x - y # Subtraction
 x + one # Can mix integers and floats
 x*y # Multiplication
 x/2 # Division

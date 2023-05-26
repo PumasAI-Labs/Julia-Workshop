@@ -40,4 +40,4 @@ uppercase(sample_text)
 lowercase(sample_text)
 titlecase(sample_text)
 
-replace(sample_text, "This is" => "That was")
+replace(sample_text, "This is" => "That was", "an example" => "a comment")
