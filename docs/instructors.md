@@ -14,11 +14,12 @@ through the concepts on that script will probably be easier after covering the c
 When showcasing `01-numeric.jl`, start explaining that Julia has extensive support for numeric variables, but that
 most users will use and come across `Float`s and `Integer`s. Go over the definition of `Integer`s, what they mean
 and how variables are assigned in Julia. Make sure to mention the use of underscores (`_`) as a useful tool to define 
-large numbers. Next, go over `Float`s following a similar approach to the one used to explain integers. Show 
-how you can create the same values as before, but as `Float`s (e.g, `1` and `1.0`) and use this opportunity to explain 
-the use of `typeof` to check a variable's type. Here you can show how to define numbers in scientific notation. Lastly, 
-go over all the math operations, mentioning the [PEMDAS order of operations](https://en.wikipedia.org/wiki/Order_of_operations),
-how to calculate square roots with `\sqrt<TAB>` and briefly showcasing rational and complex numbers.
+large numbers. Next, go over `Float`s following a similar approach to the one used to explain integers. Mention that
+`Float`s are also known as `double`s in other programming languages. Show how you can create the same values as before, 
+but as `Float`s (e.g, `1` and `1.0`) and use this opportunity to explain the use of `typeof` to check a variable's type. 
+Here you can show how to define numbers in scientific notation. Lastly, go over all the math operations, mentioning the 
+[PEMDAS order of operations](https://en.wikipedia.org/wiki/Order_of_operations), how to calculate square roots with `\sqrt<TAB>` 
+and briefly showcasing rational and complex numbers.
 
 For `02-booleans.jl`, start by showing the possible comparisons between numbers (less than, greater than, etc.). After that,
 explain the use of `!` for negation, `||` for OR and `&&` for AND. Make sure to go over how these operators work if needed.

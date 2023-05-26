@@ -9,6 +9,7 @@ title: Reference Sheets for Pumas-AI Julia Workshop
 ### Part 1: variables and types
 
 - Although there are more numeric types, `Integer`s and `Float`s are the most common ones.
+- `Float`s are also known as `double`s in other programming languages.
 - Underscores (`_`) could be helpful to define large numbers. For example, 
 `1000000` could be written as `1_000_000`.
 - `typeof` can be used to check a variable's type.
