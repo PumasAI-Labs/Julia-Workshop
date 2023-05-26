@@ -28,7 +28,7 @@ This workshop is an **introduction to the Julia programming language,** covering
 | 00:05        | Numeric variables and math  | Showcase `01-variables/01-numeric.jl`     |
 | 00:10        | Boolean variables           | Showcase `01-variables/02-booleans.jl`    |
 | 00:15        | Strings                     | Showcase `01-variables/03-strings.jl`     |
-| 00:20        | Containers                  | Showcase `02-variabbles/04-containers.jl` |
+| 00:20        | Containers                  | Showcase `01-variables/04-containers.jl` |
 
 ## Get in touch
 

@@ -19,7 +19,7 @@ title: Reference Sheets for Pumas-AI Julia Workshop
 - When used in a math context, `true` is interpreted as `1` and `false` as `0`.
 - `String`s are defined using double or triple quotes in Julia. Single quotes are
 reserved for `Char`s and cannot be used to define `String`s.
-- There are many ways to join `String`s:
+- There are many ways to concatenate `String`s:
     - Using the `string` function.
     - Using `*`.
     - Using `$` for interpolations.
@@ -45,16 +45,16 @@ retrieved by indexing with the keys.
 | Negation | `!` | Negates a boolean expression |
 | OR operator | `||` | Returns `true` if at least one of the expressions is `true` |
 | AND operator | `&&` | Returns `true` if all the expressions are `true` | 
-| Join strings | `string` and `*` | `string(str1, str2, str3)` and `str1` * `str2` * `str3` have the same effect|
+| String concatenation | `string` and `*` | `string(str1, str2, str3)` and `str1` * `str2` * `str3` have the same effect|
 | String interpolation | `$` | Used as `$(expression)` |
 | Pattern matching | `contains` and `occursin` | Used as `contains(haystack, needle)` and `occursin(needle, haystack)` |
 | Return a string with all capital letters | `uppercase` |  |
 | Return a string with all lower case letters | `lowercase` |  |
 | Return a string in title case | `titlecase` |  |
-| Replace a part of a string | `replace` | Used as `replace(str, original_part => new_part)` |
+| Replace a part of a string | `replace` | Used as `replace(str, original_part => new_part, ...)` |
 | Reshape a `Vector` | `reshape` | Used as `reshape(vector, new_shape)`, where `new_shape` could be `(3, 3)` to create a 3x3 matrix (if `vector` contains the appropriate number of elements) |
 | Indexing or slicing | `vector[1]`, `vector[1:10]`, `matrix[1, 2]`, `matrix[1:3, 2:4]` | Indexing returns a single value, while slicing returns multiple values |
- 
+|   
 ## Glossary
 
 ### Part 1: variables and types
