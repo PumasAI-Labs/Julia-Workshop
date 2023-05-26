@@ -31,6 +31,10 @@ A[begin, 3]
 numeric[1:3]
 A[1:2, 2:3]
 
+### begin and end are very convenient for slicing
+numeric[begin+1:end-1] # Get all the elements except the first and last ones
+A[begin:end, begin:2] # Get all rows, but only the first two columns
+
 # Dictionaries
 ## Tuples syntax (key, value)
 height = Dict([("Alice", 165), ("Bob", 178), ("Charlie", 172)])
