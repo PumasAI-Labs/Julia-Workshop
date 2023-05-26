@@ -23,6 +23,9 @@ and briefly showcasing rational and complex numbers.
 
 For `02-booleans.jl`, start by showing the possible comparisons between numbers (less than, greater than, etc.). After that,
 explain the use of `!` for negation, `||` for OR and `&&` for AND. Make sure to go over how these operators work if needed.
+There could be questions about using `|` and `&` instead of `||` and `&&`. If that is the case, explain the difference between
+[boolean operators](https://docs.julialang.org/en/v1/manual/mathematical-operations/#Boolean-Operators) (two operators) and
+[bitwise operators](https://docs.julialang.org/en/v1/manual/mathematical-operations/#Bitwise-Operators) (single operator).
 Next, go over the `true` and `false` types, using the examples to showcase how they work and further explain the use of the 
 operators. Mentioning that in Julia these types start with lower case could be useful if there are Python users in the
 audience. Lastly, show how boolean values can be used in math operations.
