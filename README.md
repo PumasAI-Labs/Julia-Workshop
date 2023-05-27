@@ -8,7 +8,7 @@ This workshop aims to be an introduction to the Julia programming language.
 Because of that, it covers a wide range of topics and ends up being a X hours
 workshop, which might be too extensive in certain situations.
 
-We suggest taking a look at our [recommended schedule](https://pumasai-labs.github.io/Julia-Workshop/)
+We suggest taking a look at our [recommended schedule](https://pumasai-labs.github.io/Julia-Workshop/#schedule)
 on the homepage of the workshop for more information on how to divide the workshop.
 You will notice that the workshop is divided in N parts, which is also
 reflected in the way in which we have organized the code examples in this repository:
