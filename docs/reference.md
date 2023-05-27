@@ -48,13 +48,15 @@ retrieved by indexing with the keys.
 | String concatenation | `string` and `*` | `string(str1, str2, str3)` and `str1` * `str2` * `str3` have the same effect|
 | String interpolation | `$` | Used as `$(expression)` |
 | Pattern matching | `contains` and `occursin` | Used as `contains(haystack, needle)` and `occursin(needle, haystack)` |
+| Pattern matching (beginning) | `startswith` | Check whether a `String` begins with a given sequence |
+| Pattern matching (ending) | `endswith` | Check whether a `String` ends with a given sequence |
 | Return a string with all capital letters | `uppercase` |  |
 | Return a string with all lower case letters | `lowercase` |  |
 | Return a string in title case | `titlecase` |  |
 | Replace a part of a string | `replace` | Used as `replace(str, original_part => new_part, ...)` |
 | Reshape a `Vector` | `reshape` | Used as `reshape(vector, new_shape)`, where `new_shape` could be `(3, 3)` to create a 3x3 matrix (if `vector` contains the appropriate number of elements) |
 | Indexing or slicing | `vector[1]`, `vector[1:10]`, `matrix[1, 2]`, `matrix[1:3, 2:4]` | Indexing returns a single value, while slicing returns multiple values |
-|   
+
 ## Glossary
 
 ### Part 1: variables and types
