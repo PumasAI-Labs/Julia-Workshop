@@ -40,6 +40,13 @@ retrieved by indexing with the keys.
 
 | Action      | Command       | Observations          |
 | ----------- | ------------- | --------------------- |
+| Integer type | `Int8`, `Int16`, `Int32`, `Int64` (`Int`) and `Int128` | Notation is `IntX`, where `X` denotes the number of bits used to represent the number |
+| Floating-point number types | `Float16`, `Float32` and `Float64` | Notation is `FloatX`, following the same logic as `IntX` (see previous row) |
+| Boolean type | `Bool` | Can be `true` or `false` |
+| String type | `String` | Shouldn't be confused with the function `string` |
+| Vector type | `Vector{type}` | If a vector contains `Float64`s it would be `Vector{Float64}` or if contains multiple types it would be `Vector{Any}` |
+| Matrix type | `Matrix{type}` | Follows the same syntax as `Vector`s (see previous row) |
+| Dictionary type | `Dict{key_type, value_type}` | If a dictionary has `String` keys pointing to `Float64` values, it would be `Dict{String, Float64}` | 
 | Check a variable's type | `typeof` | Used as `typeof(var)` |
 | Calculate a square root | `sqrt` or `√` | Returns the square root of a number |
 | Negation | `!` | Negates a boolean expression |
