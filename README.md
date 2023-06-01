@@ -1,13 +1,21 @@
-# Pumas-AI Workshop Templates
+# Pumas-AI Julia Workshop 
 
 [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-## How to use this template
+## Guide
 
-1. Click on the green button `Use this template`
-1. Edit all the `PLACEHOLDER` in `mkdocs.yml` with respect to `site_name`, `repo_name` and `repo_url`.
-1. Edit all the `PLACEHOLDER` in `docs/index.md`, `docs/reference.md` and `docs/instructor.md`.
-1. Add appropriate content to `docs/index.md`, `docs/reference.md` and `docs/instructor.md`.
+This workshop aims to be an introduction to the Julia programming language.
+Because of that, it covers a wide range of topics and ends up being a X hours
+workshop, which might be too extensive in certain situations.
+
+We suggest taking a look at our [recommended schedule](https://pumasai-labs.github.io/Julia-Workshop/#schedule)
+on the homepage of the workshop for more information on how to divide the workshop.
+You will notice that the workshop is divided in N parts, which is also
+reflected in the way in which we have organized the code examples in this repository:
+
+| Workshop section | Code folder |
+|------------------|-------------|
+| Variables and Types | `01-variables`|
 
 ## How to contribute
 
@@ -22,9 +30,7 @@ We use [Material for MkDocs](https://github.com/squidfunk/mkdocs-material)
 
 ## Authors
 
-- Author 1 - <email@example.com>
-- Author 2 - <email@example.com>
-- Author 3 - <email@example.com>
+- Juan José González Oneto - <j.oneto@pumas.ai>
 
 ## License
 
