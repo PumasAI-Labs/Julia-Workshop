@@ -24,4 +24,4 @@ end
 @doc(println)
 
 ## Tip: see what a macro does with @macroexpand
-@macroexpand @time println
+@macroexpand @time 3 + 2

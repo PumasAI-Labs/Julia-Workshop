@@ -12,7 +12,7 @@ end # Don't forget to add end
 ### For + conditionals
 for number in numbers
     if iseven(number)
-        println("$number is even")
+        println("$number is even") # String interpolation
     else
         println("$number is odd")
     end
@@ -23,7 +23,7 @@ end # Double end: one for the loop and another one for the conditionals
 counter = 1
 while counter <= 10 # Will execute as long as our counter is less than or equal to 10
     println(counter)
-    global counter += 1 # Update global variable i with shorthand notation (equivalent to i = i + 1)
+    global counter = counter + 1 # Update global variable counter
 end
 
 ## Can be very convenient when you don't necessarily have to go through every instance
@@ -33,7 +33,7 @@ friend = "Alice"
 
 friend_index = 1
 while names[friend_index] != friend
-    global friend_index += 1 # Watch out: removing this creates an infinite loop!
+    global friend_index += 1 # Shorthand notation to add 1 to friend_index
 end
 
 println("$friend is in the position number $friend_index of the list")
@@ -45,11 +45,12 @@ for index in eachindex(names) # eachindex => get all indices associated to a vec
         println("$(names[index]) is the position number $index of the list")
         break # Exits the loop
     end
-end
+end # Avoid infinte loops
 
 # Array comprehensions
 ## Powerful way to create arrays using for loops
 x = [i for i in 1:10]
+x2 = [2i for i in 1:10]
 greetings = ["Hello, $name" for name in names]
 
 ## Tip: you can add conditional statements in comprehensions

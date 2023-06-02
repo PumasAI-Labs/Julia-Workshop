@@ -54,7 +54,6 @@ my_var = 1
 my_very_long_named_var = 1
 
 ## Types and Modules (next lesson) start with a capital letter and use CamelCase for spaces
-
 Int # Type for integer
 int # Does not exist
 String # Type for strings
