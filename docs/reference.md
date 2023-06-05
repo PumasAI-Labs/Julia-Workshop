@@ -33,7 +33,36 @@ allow formatting `String`s.
 retrieving multiple values.
 - Dictionaries store a collection of (key, value) pairs, where values are
 retrieved by indexing with the keys.
- 
+
+### Part 2: syntax
+
+- Conditional statements are created with the `if`, `elseif` and `else`
+keywords.
+- You can add as many `elseif` as needed, and don't need to add `else`. You can
+also have a conditional statement that only includes `if`.
+- The ternary operator (`?:`) provides a convenient way to create an `if-else` 
+statement in a single line.
+- There are two types of loops, which are created with `for` and `while` keywords.
+- `for` loops are useful when you need to iterate over all elements and
+`while` loops are more suited to when you only want to loop as long as certain
+conditions are met.
+- You can emulate the behavior of a `while` loop in a `for` loop by using
+a conditional statement and `break`.
+- Conditional statements and loops should always have the `end` keyword at the end.
+- Array comprehensions provide a powerful way to create an array using `for`
+loops.
+- Compound expressions allow creating blocks of code through the `begin...end` syntax.
+- `global` variables are available everywhere, while `local` variables are
+only available in the context where they are created.
+- Constant variables can be defined using the `const` keyword before the variable definition.
+- Variables should always be named with lowercase letters, and spaces should
+be replaced with underscores (`_`).
+- `Module`s and `Types`' names start with a capital letter and use 
+[CamelCase](https://en.wikipedia.org/wiki/Camel_case) instead of spaces.
+- Macros start with `@`.
+- Macros can be called through spaces or with parenthesis (as in functions).
+- `@macroexpand` can be used to examine what a macro is doing under the hood.
+
 ## Summary of Basic Commands
 
 ### Part 1: variables and types
@@ -64,6 +93,24 @@ retrieved by indexing with the keys.
 | Reshape a `Vector` | `reshape` | Used as `reshape(vector, new_shape)`, where `new_shape` could be `(3, 3)` to create a 3x3 matrix (if `vector` contains the appropriate number of elements) |
 | Indexing or slicing | `vector[1]`, `vector[1:10]`, `matrix[1, 2]`, `matrix[1:3, 2:4]` | Indexing returns a single value, while slicing returns multiple values |
 
+### Part 2: syntax
+
+| Action      | Command       | Observations          |
+| ----------- | ------------- | --------------------- |
+| Create a conditional statement | `if`, `elseif`, `else` | Should always contain `if`, but `elseif` and `else` are optional |
+| Create a one line `if-else` conditional statement | `<boolean> ? <run if true> : <run if false>` | Known as ternary operator | 
+| Create a `for` loop | `for` | Iterates over all elements |
+| Create a `while` loop | `while` | Iterates as long as a boolean expression is `true` |
+| Exit a loop | `break` | |
+| Create an array with a `for` loop | `[<expression involving i> for i in collection]` | Known as array comprehensions |
+| Create a code block | `begin...end` | |
+| Define a global variable | `global` | Used as `global var = var_value` |
+| Define a local variable | `local` | Used as `local var = var_value` |
+| Define a constant variable | `const` | Used as `const var = var_value`  | 
+| Import a module | `using` or `import` | `using` makes the content from the package directly available, while import requires `Package.func` to use it |
+| Macro call | `@macro arg` or `@macro(arg)` | | 
+| See what a macro is doing under the hood | `@macroexpand <macro call>` | |
+
 ## Glossary
 
 ### Part 1: variables and types
@@ -85,6 +132,25 @@ in science, mathematics and engineering.
 `Dictionary`
 
 : Type of variables that stores a collection of (key, value) pairs.
+
+### Part 2: syntax
+
+`Conditional statement`
+
+: Expression that allows controlling a program's flow of execution based on the value of a boolean expression.
+
+`Loops`
+
+: Tool that allows controlling a program's flow of execution through the repeated evaluation of an expression.
+
+`Camel Case`
+
+: Writing style where spaces are replaced by capital letters (e.g Camel case becomes CamelCase). `Module`s and 
+`Type`s are named using this style in Julia.
+
+`Macros`
+
+: Special tool for [metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/) in Julia.
 
 ## Get in touch
 
