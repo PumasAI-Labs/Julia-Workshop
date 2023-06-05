@@ -40,7 +40,7 @@ Lastly, cover `04-containers.jl`. Start by showing how `Vector`s are created usi
 of variables. Next, go over matrices and the two different methods that could be used to create a matrix (line breaks and `;`). As an
 alternative, show the use of `reshape` to create a matrix from a `Vector`, and use this opportunity to discuss what Julia being column-major
 means. After that, show how indexing and slicing works for both `Vector`s and matrices. Lastly, go over dictionaries. Start by showing how to
-ceate them using `Tuple`s and the `Pair`s, and how to retrieve the values by indexing using the keys.
+create them using `Tuple`s and the `Pair`s, and how to retrieve the values by indexing using the keys.
 
 ## Get in touch
 
