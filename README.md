@@ -16,6 +16,7 @@ reflected in the way in which we have organized the code examples in this reposi
 | Workshop section | Code folder |
 |------------------|-------------|
 | Variables and Types | `01-variables`|
+| Functions | `03-functions` |
 
 ## How to contribute
 
