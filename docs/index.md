@@ -13,6 +13,15 @@ This workshop is an **introduction to the Julia programming language,** covering
     - Strings
     - Containers
 
+- **Functions:**
+    - Syntax
+    - Advanced topics:
+        - Docstrings
+        - Default values
+        - Keyword arguments
+        - Anonymous functions 
+    - Multiple dispatch
+        
 !!! success "Prerequisites"
 
     This workshop provides an introduction to the Julia programming language with a focus on functional programming. 
@@ -29,6 +38,15 @@ This workshop is an **introduction to the Julia programming language,** covering
 | 00:10        | Boolean variables           | Showcase `01-variables/02-booleans.jl`    |
 | 00:15        | Strings                     | Showcase `01-variables/03-strings.jl`     |
 | 00:20        | Containers                  | Showcase `01-variables/04-containers.jl` |
+
+### Part 3: functions
+
+| Time (HH:MM) | Activity          | Description                            |
+|--------------|-------------------|----------------------------------------|
+| 00:10        | Syntax            | Showcase `03-functions/01-syntax.jl`   |
+| 00:30        | Advanced topics   | Showcase `03-functions/02-advanced.jl` |
+| 00:35        | Multiple dispatch | Showcase `03-functions/03-dispatch.jl` |
+
 
 ## Get in touch
 
