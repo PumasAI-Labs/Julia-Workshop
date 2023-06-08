@@ -40,7 +40,61 @@ Lastly, cover `04-containers.jl`. Start by showing how `Vector`s are created usi
 of variables. Next, go over matrices and the two different methods that could be used to create a matrix (line breaks and `;`). As an
 alternative, show the use of `reshape` to create a matrix from a `Vector`, and use this opportunity to discuss what Julia being column-major
 means. After that, show how indexing and slicing works for both `Vector`s and matrices. Lastly, go over dictionaries. Start by showing how to
-ceate them using `Tuple`s and the `Pair`s, and how to retrieve the values by indexing using the keys.
+create them using `Tuple`s and the `Pair`s, and how to retrieve the values by indexing using the keys.
+
+## Part 2: syntax
+
+All scripts corresponding to this part of the workshop can be found in the `02-syntax`. In this case, it is recommended to start with
+`01-conditionals.jl` and follow the numbering scheme, as later scripts (e.g. `02-loops.jl`) use concepts from the previous ones.
+
+When covering the content from `01-conditionals.jl`, start by providing a brief description of what conditional statements are and how
+they allow creating more complex programs by altering the flow of execution. Once everyone is comfortable with that idea, show how they
+are created in Julia through the `if`, `elseif` and `else` keywords. Make sure to mention that Julia requires the keyword `end` to be
+present at the end, as this could be confusing for users coming from other programming languages. After that, go over the example that
+uses two `elseif` and doesn't have an `else` case, and use it to explain that conditional statements can be created in many different
+ways and that only `if` is required to create one. Lastly, explain how the ternary operator (`?:`) works and how it can be useful to
+write `if-else` statements concisely.
+
+Next, go over `02-loops.jl`. Once again, start by explaining that they are used to alter a program's flow of execution through the repeated
+evaluation of an expression. Start by explaining `for` loops with the simple example that prints all numbers from 1 to 10. After going over
+this example, make sure to mention how using the `for` loop saved a lot of work for this task. Two good ways to convey this idea could be
+showing how that would be done without a loop (manually write `println(1)`, `println(2)`, etc.) or changing the range to be much larger
+(`e.g. numbers = 1:1000`) so that the hard-coded solution is no longer feasible. After that, go over the example that combines a `for` loop
+and a conditional statement to showcase this common pattern.
+
+The next part of `02-loops.jl` covers the use of `while` loops. Start by explaining that `while` loops are different to `for` loops in that
+their iterations depend on the value of a boolean variable, instead of a collection or an iterable. Use the same example of printing all numbers
+from 1 to 10, focusing on how the `counter` changes until it reaches 11 and provide a brief explanation on why `global` is used when updating
+it's value. Next, go over the example of finding a name inside of a list. Use this example to explain why `while` loops are convenient when it
+is not necessary to iterate over an entire collection and how this example could be extended for a case where there are many more names in the
+list. After that, show how a similar result can be obtained with a `for` loop, a conditional statement and the `break` keyword. This example is also
+a good opportunity to discuss one of the main disadvantages of `while` loops, which is that you can easily create infinite loops. Going back to
+the previous examples might be required to show how an infinite loop can be created (e.g. the name you are looking for is not in the list or you
+forget to update the counter). Lastly, go over array comprehensions and how they can be used to create arrays with loops.
+
+After that, cover the content on `03-assignments.jl`. This script goes over different topics regarding variable assignments, starting with the use
+of compound expressions. Show the different ways in which compound expressions can be created, but mention that using `begin..end` with multiple lines
+is probably the most common and readable syntax. The next topic is variable scopes. Show how `global` variables can be accessed everywhere and explain
+with greater detail why `global` is used inside `while` loops. Next, showcase the use of `local` and how local variables are only accessible where they
+are created (inside the loop, in the example). After that, go over the use of `const` to create variables whose values should not change. Use the examples
+to show that trying to change the value returns an error if the new value is of a different `Type`, but that you only get a warning if the new value has 
+the same `Type` as the original. Finally, explain the variable naming conventions in Julia with an emphasis on how variables and functions are named in 
+a different way to `Type`s and `Module`s.
+
+For `04-modules.jl`, start by going over the concept of a software `Module`/package/library as a tool to access other people's code. Go over how packages
+are imported with the `using` keyword by showing how to import `Pumas` and `Statistics`. Show that we have access to the `mean` function after importing
+`Statistics`. Mention that multiple packages can be imported in a single line, but explain that this syntax quickly becomes difficult to read and that
+importing packages in different lines is preferred. Also, show how only certain parts of the package can be loaded with the `Package: func` syntax. After 
+that, show the use of `import` and explain how it is different from `using`.
+
+Lastly, go over `05-macros.jl`. Start by mentioning that the purpose of this lesson is to show how macros are used, and that creating macros and using
+Julia's metaprogramming tools is an advanced topic that will not be covered in the workshop. Curious attendees can be redirected to [Julia's documentation
+section on metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/#Metaprogramming), this [workshop on metaprogramming from JuliaCon 
+2021](https://www.youtube.com/watch?v=2QLhw6LVaq0) or other resources you might consider relevant.
+
+First, show that macros start with `@` and quickly go over the examples. Next, show the two ways in which macros can be called: using spaces or 
+parenthesis (as in a function). The `@time` and `@doc` macros are used in the examples, so it is a good idea to briefly talk about what those macros do. 
+Lastly, show how `@macroexpand` can be used to see what a macro is doing under the hood. 
 
 ## Get in touch
 
