@@ -115,40 +115,40 @@ be replaced with underscores (`_`).
 
 ### Part 1: variables and types
 
-`PEMDAS`
+PEMDAS
 
 : Short for **P**arenthesis, **E**xponents, **M**ultiplication, **D**ivision, **A**ddition
 and **S**ubstraction, which is the order in which mathematical operations are computed in Julia.
 
-`Scientific notation`
+Scientific notation
 
 : Method for expressing numbers in decimal form (e.g 1200 would be 1.2x10³), commonly used
 in science, mathematics and engineering.
 
-`Boolean`
+Boolean
 
 : Type of variable that can only take two values: `true` or `false`.
 
-`Dictionary`
+Dictionary
 
 : Type of variables that stores a collection of (key, value) pairs.
 
 ### Part 2: syntax
 
-`Conditional statement`
+Conditional statement
 
 : Expression that allows controlling a program's flow of execution based on the value of a boolean expression.
 
-`Loops`
+Loops
 
 : Tool that allows controlling a program's flow of execution through the repeated evaluation of an expression.
 
-`Camel Case`
+Camel Case
 
 : Writing style where spaces are replaced by capital letters (e.g Camel case becomes CamelCase). `Module`s and 
 `Type`s are named using this style in Julia.
 
-`Macros`
+Macros
 
 : Special tool for [metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/) in Julia.
 
