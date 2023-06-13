@@ -44,7 +44,7 @@ create them using `Tuple`s and the `Pair`s, and how to retrieve the values by in
 
 ## Part 2: syntax
 
-All scripts corresponding to this part of the workshop can be found in the `02-syntax`. In this case, it is recommended to start with
+All scripts corresponding to this part of the workshop can be found in the `02-syntax` folder. In this case, it is recommended to start with
 `01-conditionals.jl` and follow the numbering scheme, as later scripts (e.g. `02-loops.jl`) use concepts from the previous ones.
 
 When covering the content from `01-conditionals.jl`, start by providing a brief description of what conditional statements are and how
@@ -95,6 +95,43 @@ section on metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramm
 First, show that macros start with `@` and quickly go over the examples. Next, show the two ways in which macros can be called: using spaces or 
 parenthesis (as in a function). The `@time` and `@doc` macros are used in the examples, so it is a good idea to briefly talk about what those macros do. 
 Lastly, show how `@macroexpand` can be used to see what a macro is doing under the hood. 
+
+## Part 3: functions
+
+The code examples for this section of the workshop can be found in the `03-functions` folder.
+
+Start by going over `01-syntax.jl` as this script will cover the basics of defining and calling functions. First, show the standard way
+of creating functions with the `function` keyword, and then show how a function can be called once it has been defined. Use the examples
+to show that a function can have a single argument, multiple arguments, or no arguments at all. Next, go over the single line syntax to
+create functions, how that can be convenient for small or simple functions and how it allows creating functions in a very similar way
+to math. Lastly, go over the `return` keyword, how it can be used to return multiple values and how those values can be retrieved after
+a function call.
+
+Next, cover the contents of `02-advanced.jl`. This file contains code examples about a variety of advanced topics regarding the use of
+functions in Julia. The first topic is documentation. Show how you can add *docstrings* on top of a function's definition and how you
+can then access that documentation in the REPL by typing `?function_name`. If there are users that know how to write Markdown, mention
+that docstrings are interpreted as Markdown when displayed in the REPL. After that, go over argument and return `Type`s. Start by explaining
+how you can specify the accepted argument `Type`s by showing the examples that work and the ones that produce errors. Once that is clear,
+go over specifying the return `Type`, which should be a natural extension of what was shown before.
+
+The next advanced topic is default values for arguments. Go over the example to show how the syntax and make sure to explain how defining
+default values could be useful. It is probably important to mention that positional arguments with default values should always be left for
+the end (e.g `f(x, y=2)` instead of `f(y=2, x)`). Next, cover the use of keyword arguments. Start by explaining that keyword arguments are
+different from positional arguments in that they are identified through their names, not their positions. Then, go over the examples to show
+how they are used,and make sure to mention that it is a good practice to separate keyword arguments from positional arguments with a semicolon
+(`;`). It might be useful to mention that many packages use keyword arguments, specially for functions that have many arguments,
+which are particularly common in plotting packages such as `CairoMakie` or `AlgebraOfGraphics`.
+
+Lastly, go over anonymous functions. Use the example to show how they can be convenient in some cases. Examples using functions like `map`,
+`foreach` or `filter` could be useful, but the use of these functions will only be covered in detail until the next part of the workshop.
+
+The last script for this part of the workshop is `03-dispatch.jl`. This is intended to be a brief introduction to 
+[multiple dispatch](https://en.wikipedia.org/wiki/Multiple_dispatch) in Julia. Start by showing again how argument `Type`s can be specified
+in a function. This should be brief as this topic was covered before. Next, use the code example to explain that sometimes it could be
+useful to have one function that behaves differently depending on the arguments that are passed to it. Show how you can "define the function again"
+with different argument `Type`s and how this creates another [method](https://docs.julialang.org/en/v1/manual/methods/#Methods) for that function.
+To finish, go over the `methods` function, which allows you to see a list of the available methods for a function. Show how to use it with both the
+function from the example and a function from Julia's standard library.
 
 ## Get in touch
 
