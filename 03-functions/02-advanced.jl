@@ -13,9 +13,8 @@ greet("James") # Behaves as you would expect
 ## Now try ?greet in the REPL
 
 # Argument and return types
-"""
-This functions takes two integers and returns the product
-"""
+
+"This function takes two integers and returns the product"
 product(x::Int, y::Int) = x*y # Add two integers
 
 product(2, 3) # Works well
