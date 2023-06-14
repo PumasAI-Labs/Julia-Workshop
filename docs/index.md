@@ -21,6 +21,13 @@ This workshop is an **introduction to the Julia programming language,** covering
     - Modules
     - Macros
 
+- **Functional programming**
+    - Use the vectorized form of a function.
+    - Apply a function over an array with `map` and `foreach`.
+    - Collapse containers into a single value with ` reduce` and `mapreduce`.
+    - Filter and count values based on boolean variables using `filter` and `count`.
+    - Compose and chain functions. 
+
 !!! success "Prerequisites"
 
     This workshop provides an introduction to the Julia programming language with a focus on functional programming. 
