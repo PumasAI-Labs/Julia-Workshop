@@ -13,10 +13,11 @@ on the homepage of the workshop for more information on how to divide the worksh
 You will notice that the workshop is divided in N parts, which is also
 reflected in the way in which we have organized the code examples in this repository:
 
-| Workshop section | Code folder |
-|------------------|-------------|
-| Variables and Types | `01-variables`|
-| Syntax | `02-syntax` |
+| Workshop section       | Code folder                 |
+|------------------------|-----------------------------|
+| Variables and Types    | `01-variables`              |
+| Syntax                 | `02-syntax`                 |
+| Functional programming | `04-functional_programming` |
 
 ## How to contribute
 
