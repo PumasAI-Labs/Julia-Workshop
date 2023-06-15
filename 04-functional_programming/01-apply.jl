@@ -38,7 +38,4 @@ foreach(greet, ["Alice", "Juan", "Bob"])
 ## More complex example: create and delete some files
 files = map(i -> "file$i.txt", 1:3)
 foreach(touch, files) # Use the touch function to create the files
-readdir() # Check that the files are there
 foreach(rm, files) # Use the rm function to delete the files
-readdir() # Check that they are gone
-

@@ -3,10 +3,10 @@
 exp(sqrt(abs(-2))) # Compute abs(-2), pass the result to sqrt and then pass the result to exp
 
 # Function composition
-f = (exp ∘ sqrt ∘ abs) # ∘ = \circ<TAB>
+f = (exp ∘ sqrt ∘ abs) # ∘ => \circ<TAB>
 f(-2)
 
-(exp ∘ sqrt ∘ abs)(-2) # One line syntax
+(exp ∘ sqrt ∘ abs)(-2) # You can also do it in one line (avoid defining the function)
 
 ## More complex example: vector norm
 v = [1, 0.5, 2.3]
@@ -21,7 +21,7 @@ using LinearAlgebra
 norm(v) # Check our results
 
 # Function chaining (piping)
-2 |> abs |> sqrt |> exp # Opposite order from composition
+-2 |> abs |> sqrt |> exp # Opposite order from composition
 
 ## Vector norm
 v |> (i -> i.^2) |> sum |> sqrt
