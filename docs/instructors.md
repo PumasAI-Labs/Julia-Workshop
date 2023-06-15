@@ -102,7 +102,7 @@ The code examples for this section of the workshop can be found in the `03-funct
 
 Start by going over `01-syntax.jl` as this script will cover the basics of defining and calling functions. First, show the standard way
 of creating functions with the `function` keyword, and then show how a function can be called once it has been defined. Use the examples
-to show that a function can have a single argument, multiple arguments, or no arguments at all. Next, go over the single line syntax to
+to show that a function can have a single argument, multiple arguments, or no arguments at all. Next, go over the compact assignment form to
 create functions, how that can be convenient for small or simple functions and how it allows creating functions in a very similar way
 to math. Lastly, go over the `return` keyword, how it can be used to return multiple values and how those values can be retrieved after
 a function call.

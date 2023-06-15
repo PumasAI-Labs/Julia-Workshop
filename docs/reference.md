@@ -66,7 +66,7 @@ be replaced with underscores (`_`).
 ### Part 3: functions
 
 - Complex functions can be created with the `function` keyword, while simpler ones can be 
-more conveniently defined using the single line syntax (e.g `f(x) = x^2`).
+more conveniently defined using the compact assignment form (e.g `f(x) = x^2`).
 - When a function doesn't have a return value, it is a good practice to place `return end` at the
 end of the function definition.
 - You can return multiple values by separating them with commas (e.g `return value1, value2, ...`).
@@ -143,7 +143,7 @@ are passed to them. Each one of those definitions are known as [methods](https:/
 | Action                                    | Command                     | Observations                                                                      |
 |-------------------------------------------|-----------------------------|-----------------------------------------------------------------------------------|
 | Create a function (multiple lines syntax) | `function name(args)`       | Used for long and complex functions                                               |
-| Create a function (single line syntax)    | `name(args) = <expression>` | Used for short and simple functions. Similar to how functions are defined in math |
+| Create a function (compact assignment form) | `name(args) = <expression>` | Used for short and simple functions. Similar to how functions are defined in math |
 | Create a function (anonymous) | `(arg1, arg2, ...) -> <expression>` | Used when the function's name is not relevant |
 | Access a function's documentation from the REPL | `?function_name` | Docstrings are interpreted as Markdown |
 | Specify `Type`s of a function's arguments | `f(x::<type for x>, y::<type for y>, ...) = ...` | |

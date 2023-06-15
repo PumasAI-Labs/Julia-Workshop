@@ -25,7 +25,7 @@ end
 
 hello_world()
 
-## Single line syntax
+## Compact function assignment
 greet(name) = println("Hello, $name") # name(args) = result
 
 greet("James")
