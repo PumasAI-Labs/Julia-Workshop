@@ -63,6 +63,23 @@ be replaced with underscores (`_`).
 - Macros can be called through spaces or with parenthesis (as in functions).
 - `@macroexpand` can be used to examine what a macro is doing under the hood.
 
+### Part 4: functional programming
+
+- The dot syntax (`f.(x)`) allows you to use the vectorized version of a function.
+- You can apply a function on each element of an array using the `map` function.
+- You can execute a function on each element of an array using the `foreach` function. `foreach` 
+differs from `map` in that it does not return an array with the results, so it should only 
+be used when the return values of the function being applied are not needed.
+- The `reduce` function allows collapsing the elements of an array using a function. 
+- A common use of `reduce` consists on creating an array with `map` and then passing it to `reduce`
+to obtain a single value. Instead of doing this, it is recommended to use `mapreduce`, which offers
+this functionality and has better performance.
+- You can pick the elements that satisfy a given condition in an array using the `filter` function.
+- If you are only interested in knowing how many elements satisfy a given condition, you can use the 
+`count` function.
+- Functions can be combined using the composition operator (`∘`).
+- Consecutive function calls can be chained using the pipe operator (`|>`).
+
 ## Summary of Basic Commands
 
 ### Part 1: variables and types
@@ -111,6 +128,20 @@ be replaced with underscores (`_`).
 | Macro call | `@macro arg` or `@macro(arg)` | | 
 | See what a macro is doing under the hood | `@macroexpand <macro call>` | |
 
+### Part 4: functional programming
+
+| Action      | Command       | Observations          |
+| ----------- | ------------- | --------------------- |
+| Call the vectorized form of a function | `f.(x)` | Returns the result of evaluating `f` on each element of array `x` |
+| Apply a function on each element of an array | `map` | Used as `map(function, array)` |
+| Run a function on each element of an array | `foreach` | Similar to `map`, but doesn't return an array (just runs the function) |
+| Collapse all elements of an array into a single value using a function | `reduce` | Used as `reduce(reducing_function, array)` |
+| Create an array with `map` and then collapse it with `reduce` | `mapreduce` | Equivalent to `reduce(reducing_function, <map call>)`, but more efficient |
+| Get the elements that satisfy a given condition from an array | `filter` | Used as `filter(<function returning boolean>, array)` |
+| Count how many elements satisfy a given condition in an array | `count` | Used in the same way as `filter` |
+| Compose functions | `(function3 ∘ function2 ∘ function1)(arg)` | `∘` is created with `\circ<TAB>` |
+| Chain function calls | `arg |> function1 |> function2 |> function3` | `|>` can be vectorized as `.|>` |
+
 ## Glossary
 
 ### Part 1: variables and types
@@ -151,6 +182,23 @@ Camel Case
 Macros
 
 : Special tool for [metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/) in Julia.
+
+### Part 4: functional programming
+
+[Functional programming](https://en.wikipedia.org/wiki/Functional_programming)
+
+: Programming strategy that relies on creating and combining functions. 
+
+Vectorized function
+
+: Form of a function that allows applying it to all elements of a vector (e.g 
+`f([x1, x2, x3]) = [f(x1), f(x2), f(x3)]`)
+
+[Function composition](https://en.wikipedia.org/wiki/Function_composition)
+
+: Combining two or more functions to create a new one that chains them together. 
+For example, composing functions the `f(x)` and `g(x)` (`f ∘ g`) creates a new
+function defined as `f(g(x))`.
 
 ## Get in touch
 
