@@ -43,12 +43,10 @@ f(3)
 
 ## Return multiple values
 function even_greater_than_10(number)
-
     even = iseven(number) # A function that we didn't write
     greater = number > 10
 
     return even, greater # Return multiple values with return1, return2, return3, ...
-
 end
 
 checks = even_greater_than_10(12) # We get a Tuple
@@ -57,7 +55,7 @@ checks = even_greater_than_10(12) # We get a Tuple
 even = checks[1]
 greater = checks[2]
 
-## Tip: compact way to get multiple values
+## Tip: useful way to unpack multiple values
 even, greater = even_greater_than_10(13)
 even
 greater

@@ -12,7 +12,6 @@ This workshop is an **introduction to the Julia programming language,** covering
     - Boolean variables
     - Strings
     - Containers
-    
 - **Syntax:**
     - Control flow
         - Conditional statements
