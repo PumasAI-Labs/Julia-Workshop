@@ -19,7 +19,6 @@ This workshop is an **introduction to the Julia programming language,** covering
     - Variable assignment
     - Modules
     - Macros
-
 - **Functions:**
     - Syntax
     - Advanced topics:

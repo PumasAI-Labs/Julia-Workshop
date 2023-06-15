@@ -55,7 +55,6 @@ function identify_args(positional1, positional2; keyword1, keyword2)
     println(message)
 
     return nothing
-
 end
 
 identify_args(1, 2; keyword1=3, keyword2=4) # Keyword arguments are separated from the rest by ;
@@ -69,10 +68,8 @@ This function takes a function an applies it to
 a vector of numbers
 """
 function apply(func, vector) # Watch out: you cannot use "function" as a argument name
-
     new_vector = [func(element) for element in vector] # Array comprehension
     return new_vector
-
 end
 
 ## Let's try to calculate x² for all numbers between 1 and 10
