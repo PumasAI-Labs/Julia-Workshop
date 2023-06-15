@@ -55,6 +55,15 @@ This workshop is an **introduction to the Julia programming language,** covering
 | 00:35        | Modules                   | Showcase `02-syntax/04-modules.jl`      |
 | 00:40        | Macros                    | Showcase `02-syntax/05-macros.jl`       |
 
+### Part 4: functional programming
+
+| Time (HH:MM) | Activity                                | Description                                            |
+|--------------|-----------------------------------------|--------------------------------------------------------|
+| 00:10        | Apply functions over an array           | Showcase `04-functional_programming/01-apply.jl`       |
+| 00:15        | Collapse containers into a single value | Showcase `04-functional_programming/02-reduce.jl`      |
+| 00:20        | Filter and count values                 | Showcase `04-functional_programming/03-filter.jl`      |
+| 00:30        | Compose and chain functions             | Showcase `04-functional_programming/04-composition.jl` |
+
 ## Get in touch
 
 If you have any suggestions or want to get in touch with our education team,
