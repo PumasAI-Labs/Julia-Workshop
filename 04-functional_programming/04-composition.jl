@@ -3,8 +3,8 @@
 exp(sqrt(abs(-2))) # Compute abs(-2), pass the result to sqrt and then pass the result to exp
 
 # Function composition
-f = (exp ∘ sqrt ∘ abs) # ∘ => \circ<TAB>
-f(-2)
+my_operation = (exp ∘ sqrt ∘ abs) # ∘ => \circ<TAB>
+my_operation(-2)
 
 (exp ∘ sqrt ∘ abs)(-2) # You can also do it in one line (avoid defining the function)
 
