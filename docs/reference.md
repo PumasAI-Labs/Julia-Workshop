@@ -75,6 +75,8 @@ be used when the return values of the function being applied are not needed.
 to obtain a single value. Instead of doing this, it is recommended to use `mapreduce`, which offers
 this functionality and has better performance.
 - You can pick the elements that satisfy a given condition in an array using the `filter` function.
+- If you want to check if a variable is `missing`, you should use the function `ismissing` instead of
+a comparison such as `var == missing`, which will always return `missing`, regardless of `var`'s `Type`.
 - If you are only interested in knowing how many elements satisfy a given condition, you can use the 
 `count` function.
 - Functions can be combined using the composition operator (`∘`).
@@ -138,6 +140,7 @@ this functionality and has better performance.
 | Collapse all elements of an array into a single value using a function | `reduce` | Used as `reduce(reducing_function, array)` |
 | Create an array with `map` and then collapse it with `reduce` | `mapreduce` | Equivalent to `reduce(reducing_function, <map call>)`, but more efficient |
 | Get the elements that satisfy a given condition from an array | `filter` | Used as `filter(<function returning boolean>, array)` |
+| Check if a variable is missing | `ismissing` | Should be used instead of `var == missing`, which doesn't work |
 | Count how many elements satisfy a given condition in an array | `count` | Used in the same way as `filter` |
 | Compose functions | `(function3 ∘ function2 ∘ function1)(arg)` | `∘` is created with `\circ<TAB>` |
 | Chain function calls | `arg |> function1 |> function2 |> function3` | `|>` can be vectorized as `.|>` |
