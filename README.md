@@ -17,6 +17,7 @@ reflected in the way in which we have organized the code examples in this reposi
 |------------------------|-----------------------------|
 | Variables and Types    | `01-variables`              |
 | Syntax                 | `02-syntax`                 |
+| Functions              | `03-functions`              |
 | Functional programming | `04-functional_programming` |
 
 ## How to contribute

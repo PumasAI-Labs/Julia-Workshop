@@ -12,7 +12,6 @@ This workshop is an **introduction to the Julia programming language,** covering
     - Boolean variables
     - Strings
     - Containers
-
 - **Syntax:**
     - Control flow
         - Conditional statements
@@ -20,7 +19,14 @@ This workshop is an **introduction to the Julia programming language,** covering
     - Variable assignment
     - Modules
     - Macros
-
+- **Functions:**
+    - Syntax
+    - Advanced topics:
+        - Docstrings
+        - Default values
+        - Keyword arguments
+        - Anonymous functions 
+    - Multiple dispatch
 - **Functional programming**
     - Use the vectorized form of a function.
     - Apply a function over an array with `map` and `foreach`.
@@ -54,6 +60,14 @@ This workshop is an **introduction to the Julia programming language,** covering
 | 00:30        | Variable asignment        | Showcase `02-syntax/03-assignments.jl`  |
 | 00:35        | Modules                   | Showcase `02-syntax/04-modules.jl`      |
 | 00:40        | Macros                    | Showcase `02-syntax/05-macros.jl`       |
+
+### Part 3: functions
+
+| Time (HH:MM) | Activity          | Description                            |
+|--------------|-------------------|----------------------------------------|
+| 00:10        | Syntax            | Showcase `03-functions/01-syntax.jl`   |
+| 00:30        | Advanced topics   | Showcase `03-functions/02-advanced.jl` |
+| 00:35        | Multiple dispatch | Showcase `03-functions/03-dispatch.jl` |
 
 ### Part 4: functional programming
 

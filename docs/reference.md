@@ -63,6 +63,33 @@ be replaced with underscores (`_`).
 - Macros can be called through spaces or with parenthesis (as in functions).
 - `@macroexpand` can be used to examine what a macro is doing under the hood.
 
+### Part 3: functions
+
+- Complex functions can be created with the `function` keyword, while simpler ones can be 
+more conveniently defined using the compact assignment form (e.g `f(x) = x^2`).
+- When a function doesn't have a return value, it is a good practice to place `return end` at the
+end of the function definition.
+- You can return multiple values by separating them with commas (e.g `return value1, value2, ...`).
+Multiple return values can then be retrieved by indexing the resulting `Tuple` or by separating 
+the variables where they will be stored with commas (e.g `value1, value2 = f(x)` with `f(x)` having
+`return value1, value2` at the end).
+- You can add documentation to a function by adding [docstrings](https://docs.julialang.org/en/v1/manual/documentation/#Writing-Documentation)
+on top of the function definition. These strings are interpreted as Markdown, and can be accessed
+from the Julia REPL by typing `?function_name`.
+- You can constrain the variable `Type`s that are accepted as input and the variable `Type` returned
+by the function using `::`. For example, in `product(x::Int, y::Int)::Float64 = x*y`, the two arguments 
+are restricted to be of type `Int` and the return value to be a `Float64`).
+- You can set default values for a function's arguments by using the assignment syntax inside 
+of the function's definition. For instance, `f(x = 2) = 2x` will make `2` be the default value
+for `x`.
+- Keyword arguments are separated from positional arguments with a semicolon (`;`). The order in
+which keyword arguments are passed to the function doesn't matter. Instead, the names are used
+to identify which value is assigned to which argument.
+- Anonymous functions can be used when the name of the function is not relevant. 
+- Multiple dispatch allows specifying a different behavior for functions depending on the arguments that
+are passed to them. Each one of those definitions are known as [methods](https://docs.julialang.org/en/v1/manual/methods/#Methods).
+- You can check the available methods for a function with the `methods` function (e.g `methods(println)`).
+
 ### Part 4: functional programming
 
 - The dot syntax (`f.(x)`) allows you to use the vectorized version of a function.
@@ -130,6 +157,20 @@ a comparison such as `var == missing`, which will always return `missing`, regar
 | Macro call | `@macro arg` or `@macro(arg)` | | 
 | See what a macro is doing under the hood | `@macroexpand <macro call>` | |
 
+### Part 3: functions
+
+| Action                                    | Command                     | Observations                                                                      |
+|-------------------------------------------|-----------------------------|-----------------------------------------------------------------------------------|
+| Create a function (multiple lines syntax) | `function name(args)`       | Used for long and complex functions                                               |
+| Create a function (compact assignment form) | `name(args) = <expression>` | Used for short and simple functions. Similar to how functions are defined in math |
+| Create a function (anonymous) | `(arg1, arg2, ...) -> <expression>` | Used when the function's name is not relevant |
+| Access a function's documentation from the REPL | `?function_name` | Docstrings are interpreted as Markdown |
+| Specify `Type`s of a function's arguments | `f(x::<type for x>, y::<type for y>, ...) = ...` | |
+| Specify the `Type` of a function's return | `f(x, y)::<type for return> = ...` | |
+| Define default values for an argument | `f(x=<default for x>, y=<default for y>) = ...` | Default values for positional arguments should be left for the end (e.g `f(x, y=2)` instead of `f(y=2, x)`, which will throw an error. |
+| Define keyword arguments for a function | `f(<positional args>; <keyword args>) = ...` | Keyword arguments are separated from positional arguments with a semicolon (`;`) |
+| Check the available methods for a function | `methods(function)` | | 
+
 ### Part 4: functional programming
 
 | Action      | Command       | Observations          |
@@ -161,11 +202,11 @@ in science, mathematics and engineering.
 
 Boolean
 
-: Type of variable that can only take two values: `true` or `false`.
+: `Type` of variable that can only take two values: `true` or `false`.
 
 Dictionary
 
-: Type of variables that stores a collection of (key, value) pairs.
+: `Type` of variables that stores a collection of (key, value) pairs.
 
 ### Part 2: syntax
 
@@ -185,6 +226,21 @@ Camel Case
 Macros
 
 : Special tool for [metaprogramming](https://docs.julialang.org/en/v1/manual/metaprogramming/) in Julia.
+
+### Part 3: functions
+
+Function
+
+: Julia object that maps a series of argument values to a return value.
+
+Anonymous function
+
+: A function that is created without specifying a name.
+
+Multiple dispatch
+
+: Feature in Julia that allows a function to behave differently based on the `Type`s of
+the arguments passed to it.
 
 ### Part 4: functional programming
 
