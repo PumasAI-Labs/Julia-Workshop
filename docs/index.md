@@ -27,6 +27,12 @@ This workshop is an **introduction to the Julia programming language,** covering
         - Keyword arguments
         - Anonymous functions 
     - Multiple dispatch
+- **Functional programming**
+    - Use the vectorized form of a function.
+    - Apply a function over an array with `map` and `foreach`.
+    - Collapse containers into a single value with ` reduce` and `mapreduce`.
+    - Filter and count values based on boolean variables using `filter` and `count`.
+    - Compose and chain functions. 
 
 !!! success "Prerequisites"
 
@@ -63,6 +69,14 @@ This workshop is an **introduction to the Julia programming language,** covering
 | 00:30        | Advanced topics   | Showcase `03-functions/02-advanced.jl` |
 | 00:35        | Multiple dispatch | Showcase `03-functions/03-dispatch.jl` |
 
+### Part 4: functional programming
+
+| Time (HH:MM) | Activity                                | Description                                            |
+|--------------|-----------------------------------------|--------------------------------------------------------|
+| 00:10        | Apply functions over an array           | Showcase `04-functional_programming/01-apply.jl`       |
+| 00:15        | Collapse containers into a single value | Showcase `04-functional_programming/02-reduce.jl`      |
+| 00:20        | Filter and count values                 | Showcase `04-functional_programming/03-filter.jl`      |
+| 00:30        | Compose and chain functions             | Showcase `04-functional_programming/04-composition.jl` |
 
 ## Get in touch
 
