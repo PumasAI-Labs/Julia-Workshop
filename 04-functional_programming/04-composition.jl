@@ -8,21 +8,20 @@ my_operation(-2)
 
 (exp ∘ sqrt ∘ abs)(-2) # You can also do it in one line (avoid defining the function)
 
-## More complex example: vector norm
-v = [1, 0.5, 2.3]
+## More complex example: geometric mean
+x = 1:10
 
-√(sum(map(i -> i^2, v)))
-√(mapreduce(i -> i^2, +, v))
+exp(sum(log.(x))/length(x))
 
-vector_norm = (sqrt ∘ sum ∘ i -> i.^2)
-vector_norm(v)
+geometric_mean = (exp ∘ (i -> sum(i)/length(i)) ∘ (i -> log.(i))) # Watch out: wrap anonymous functions around parenthesis
+geometric_mean(x)
 
-using LinearAlgebra
-norm(v) # Check our results
+using StatsBase
+geomean(x) # Check our results
 
 # Function chaining (piping)
 -2 |> abs |> sqrt |> exp # Opposite order from composition
 
-## Vector norm
-v |> (i -> i.^2) |> sum |> sqrt
-v .|> (i -> i^2) |> sum |> sqrt # You can vectorize the piping operator (.|>)
+## Geometric mean
+x |> (i -> log.(i)) |> (i -> sum(i)/length(i)) |> exp
+x .|> log |> (i -> sum(i)/length(i)) |> exp # You can vectorize the piping operator (.|>)
