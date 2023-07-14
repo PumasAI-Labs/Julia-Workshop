@@ -147,7 +147,6 @@ version of many functions.
 Next, go over the use of the `map` function, which allows getting the same results as before by specifying the function and the collection as it's
 arguments. Explain the examples and make special emphasis on the use of `map` with anonymous functions, since this is a common use case for the function.
 After that, explain how the `foreach` function works. Here, is it very important to make sure that users understand the difference between `map` and `foreach`.
-There is a more complex example on the use of `foreach` to showcase a particular case where using it could be more convenient than `map`.
 
 After that, move on to the `02-reduce.jl` script. This part of the lesson is focused on the use of `reduce` and `mapreduce` to collapse containers into a single
 value. Start by showing the simple examples involving `+` and `*` and then go over the more complex one involving a custom function. Make sure to provide a
