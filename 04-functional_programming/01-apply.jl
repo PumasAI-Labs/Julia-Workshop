@@ -1,41 +1,52 @@
 # Functional programming is about creating your programs by applying and composing functions
 
-# Apply a function to a collection
-f(x) = x^2
-x = 1:10
+"""
+A function that calculates the terminal slope using the last and 
+the third to last observations
+"""
+function terminal_slope(observations, time=[0, 1, 2, 4, 8, 12, 24]) # We are setting default time values
+
+    dy = observations[end-2] - observations[end]
+    dx = time[end-2] - time[end]
+
+    return dy/dx
+
+end
+
+# Now let's suppose we wan't to calculate the terminal slope for a group of subjects
+population = Dict(
+    "SUBJ-1" => [0.01, 112, 224, 220, 143, 109, 57],
+    "SUBJ-2" => [0.01, 78, 168, 148, 119, 97, 48],
+    "SUBJ-3" => [0.01, 54, 100, 91, 73, 56, 32]
+)
 
 ## We could do an array comprehension
-[f(i) for i in x]
+obs = collect(values(population)) # Retrieve the observations from the dictionary
+[terminal_slope(observations) for observations in obs]
 
 ## Vectorize the function
-f(x) # Doesn't work: x^2 is not defined for a vector
-f.(x) # f.(x) tells Julia to evaluate the function for each element
-sin.(0:0.1:2π) # Works with any Julia function
+terminal_slope(obs) # We don't get the result we expected (7 values instead of 3)
+terminal_slope.(obs) # f.(x) tells Julia to evaluate the function for each element
+log.(obs[1]) # Works with any Julia function
 
 ### Tip: you can use the @. macro if you want to vectorize multiple function calls
-y = 11:20
-sin(x*y + 2) # Doesn't work
-sin.(x .* y .+ 2) # We need to vectorize both operations
-@. sin(x*y + 2) # The macro just vectorizes everything for us
+abs(terminal_slope.(obs)) # Now abs fails, we need to vectorize it
+abs.(terminal_slope.(obs))
+@. abs(terminal_slope(obs)) # @. vectorized all the function calls for us
 
 ## Use the map function
-map(f, x)
-map(sin, 0:0.1:2π)
+map(terminal_slope, obs)
+map(log, obs[1])
 
 ### Tip: anonymous functions are often used with map
-map(x -> x^2, x)
-map(i -> iseven(i) ? "$i is even" : "$i is odd", x) # Anonymous function + ternary operator
+map(x -> log.(x), obs) # Calculate the logarithm of all observations (not just obs[1])
+map(i -> abs(terminal_slope(i)) < 5 ? "Less than 5" : "Greater than 5", obs) # Anonymous function + ternary operator
 
 # Execute a function for each element (map, but when the results are not needed)
-foreach(f, x) # We don't get anything back
-typeof(foreach(f, x))
+foreach(terminal_slope, obs) # We don't get anything back
+typeof(foreach(terminal_slope, obs))
 
-foreach(println, x) # Print all numbers (we just want to print)
+foreach(println, keys(population)) # Print subject IDs (we just want to print)
 
-greet(name) = println("Hello, $(name)!")
-foreach(greet, ["Alice", "Juan", "Bob"])
-
-## More complex example: create and delete some files
-files = map(i -> "file$i.txt", 1:3)
-foreach(touch, files) # Use the touch function to create the files
-foreach(rm, files) # Use the rm function to delete the files
+get_id_number(subject_id) = println("$(subject_id) has ID number $(last(subject_id))")
+foreach(get_id_number, keys(population))
