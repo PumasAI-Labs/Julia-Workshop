@@ -160,7 +160,7 @@ mention that the same results can be achieved with `mapreduce`, but with improve
 The next script that you should go over is `03-filter.jl`. The code examples in this file focus on the use of the `filter` function, which allows
 retrieving the elements of an array that satisfy a given condition. Go over the syntax, highlighting the fact that it is the same as `map`, `foreach`
 and `reduce`. You might need to spend extra time in the example about removing `missing` values. In particular, make sure to explain why it is
-necessary to using the `ismissing` function. Lastly, show the use of the `count` function as an alternative to `filter` when you are only interested
+necessary to use the `ismissing` function. Lastly, show the use of the `count` function as an alternative to `filter` when you are only interested
 in knowing how many elements satisfy a condition (as opposed to knowing which elements satisfy the condition).
 
 Finally, go over the contents on `04-composition.jl`. This is a brief introduction to composing and chaining function calls. Start by going over the 
