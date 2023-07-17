@@ -6,8 +6,8 @@ the third to last observations
 """
 function terminal_slope(observations, time=[0, 1, 2, 4, 8, 12, 24]) # We are setting default time values
 
-    dy = observations[end-2] - observations[end]
-    dx = time[end-2] - time[end]
+    dy = observations[end] - observations[end-2]
+    dx = time[end] - time[end-2]
 
     return dy/dx
 
