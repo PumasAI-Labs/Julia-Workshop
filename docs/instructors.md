@@ -133,6 +133,46 @@ with different argument `Type`s and how this creates another [method](https://do
 To finish, go over the `methods` function, which allows you to see a list of the available methods for a function. Show how to use it with both the
 function from the example and a function from Julia's standard library.
 
+## Part 4: functional programming
+
+The files for this part of the workshop are located in the `04-functional_programming` folder.
+
+Start by going over the content on `01-apply.jl`. This script contains examples on the use of vectorized functions, `map` and `foreach` to apply
+a function to all elements in an array. To begin, use the example to show how the 
+[vectorized version of a function](https://docs.julialang.org/en/v1/manual/functions/#man-vectorized) can be used to apply a function to a collection
+in a concise syntax. Make sure to mention that this behavior is available for in *any* Julia function. Using an example from a function that was not defined
+in the script might be useful for this. Also, cover the use of the `@.` macro as a convenient tool to write expressions that require using the vectorized
+version of many functions.
+
+Next, go over the use of the `map` function, which allows getting the same results as before by specifying the function and the collection as it's
+arguments. Explain the examples and make special emphasis on the use of `map` with anonymous functions, since this is a common use case for the function.
+After that, explain how the `foreach` function works. Here, is it very important to make sure that users understand the difference between `map` and `foreach`.
+
+After that, move on to the `02-reduce.jl` script. This part of the lesson is focused on the use of `reduce` and `mapreduce` to collapse containers into a single
+value. Start by showing the simple examples involving `+` and `*` and then go over the more complex one involving a custom function. Make sure to provide a
+detailed explanation on how this function is created as it could be confusing at first, but note that `reduce` is often used with `+` and `*`. Users might
+be curious as to why it was necessary to provide an initial value in the example for the custom function and not before. If that is the case, you can answer
+that the `init` keyword argument is required for all functions except `+`, `*`, `min` and `max`. Next, cover the common use pattern of `reduce` + `map` and
+mention that the same results can be achieved with `mapreduce`, but with improved performance. You can find more information about this in 
+[`mapreduce`'s docstring](https://docs.julialang.org/en/v1/base/collections/#Base.mapreduce-Tuple{Any,%20Any,%20Any}).
+
+The next script that you should go over is `03-filter.jl`. The code examples in this file focus on the use of the `filter` function, which allows
+retrieving the elements of an array that satisfy a given condition. Go over the syntax, highlighting the fact that it is the same as `map`, `foreach`
+and `reduce`. You might need to spend extra time in the example about removing `missing` values. In particular, make sure to explain why it is
+necessary to use the `ismissing` function. Lastly, show the use of the `count` function as an alternative to `filter` when you are only interested
+in knowing how many elements satisfy a condition (as opposed to knowing which elements satisfy the condition).
+
+Finally, go over the contents on `04-composition.jl`. This is a brief introduction to composing and chaining function calls. Start by going over the 
+composition operator (`∘`). Show that this is an alternative to calling multiple functions inside each other (e.g `func1(func2(func3(args)))`) and
+explain how it allows combining simple functions to create a more complicated one. Also, make sure to showcase how you can define a new
+function from the composition of multiple functions through the assignment syntax (`new_function = func1 ∘ func2 ∘ func3`) and that you can define the
+function and call it in one go (`(func1 ∘ func2 ∘ func3)(args)`). It is likely that users won't know how to type `∘`, so make sure to mention that
+it is created with `\circ<TAB>`.
+
+The last topic for this lesson is function chaining through the pipe operator (`|>`). Show how it can be used to get the same results as with function
+composition, but with a different syntax. Make sure to mention that parenthesis are required when using anonymous functions and that the pipe operator
+can be used in a vectorized version (`.|>`).
+
 ## Get in touch
 
 If you have any suggestions or want to get in touch with our education team,
