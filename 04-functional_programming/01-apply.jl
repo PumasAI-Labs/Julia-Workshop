@@ -4,7 +4,7 @@
 A function that calculates the terminal slope using the last and 
 the third to last observations
 """
-function terminal_slope(observations, time=[0, 1, 2, 4, 8, 12, 24]) # We are setting default time values
+function terminal_slope(observations; time=[0, 1, 2, 4, 8, 12, 24]) # We are setting default time values
 
     dy = observations[end] - observations[end-2]
     dx = time[end] - time[end-2]
