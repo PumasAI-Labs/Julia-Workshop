@@ -17,7 +17,7 @@ function AUC(times::Vector, observations::Vector)
 
 end
 
-AUC(1, 10) # Throws an because both arguments need to be Vectors
+AUC(1, 10) # Throws an error because both arguments need to be Vectors
 AUC(times, observations)
 
 # Suppose we would also like to have something that calculates the AUC for a population
@@ -88,4 +88,4 @@ AUC # Note that now "AUC" is a function with 2 methods
 
 ## Tip: check methods available for a function
 methods(AUC)
-methods(string) # An example for a Julia function that has many methods
+methods(string) # An example of a Julia function that has many methods

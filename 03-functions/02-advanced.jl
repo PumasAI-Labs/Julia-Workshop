@@ -90,7 +90,7 @@ terminal_slope(times, observations, npoints=1) # Also works, but using ; is reco
 
 # Anonymous functions
 """
-This function takes a function an applies it to
+This function takes a function and applies it to
 a vector of numbers
 """
 function apply(func, vector) # Watch out: you cannot use "function" as an argument name

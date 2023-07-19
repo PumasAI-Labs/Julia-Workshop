@@ -61,7 +61,7 @@ summary = summary_statistics(1:10) # We get a Tuple
 min = summary[1]
 q2 = summary[4]
 
-## Tip: useful way to unpack multiple values
+## Tip: a useful way to unpack multiple values
 min, max, q1, q2, q3 = summary_statistics(1:10)
 min
 q2
