@@ -35,6 +35,10 @@ We use [Material for MkDocs](https://github.com/squidfunk/mkdocs-material)
 
 - Juan José González Oneto - <j.oneto@pumas.ai>
 
+## Acknowledgments
+
+The authors would like to acknowledge the use of the [Julia Data Science book](https://juliadatascience.io/) and [Pumas-AI's tutorials](https://tutorials.pumas.ai/) as inspiration during the making of this workshop.
+
 ## License
 
 This content is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/).
