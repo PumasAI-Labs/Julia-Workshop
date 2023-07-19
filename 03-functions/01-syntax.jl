@@ -2,12 +2,12 @@
 ## Powerful and commonly used tool in Julia and other programming languages
 
 ## Multiple lines syntax
-function geometric_mean(values) # function name(args)
+function geo_mean(values) # function name(args)
     prod(values)^(1/length(values)) # Manipulate args
 end # Watch out: end is required
 
-geometric_mean(1:10)
-geometric_mean(rand(10)) # We have created code that works for any vector of numbers
+geo_mean(1:10)
+geo_mean(rand(10)) # We have created code that works for any vector of numbers
 
 ### Tip: you can calculate geometric means with the StatsBase package
 using StatsBase
@@ -32,10 +32,10 @@ terminal_slope(times, observations)
 pwd() # Prints the present working directory
 
 ## Compact function assignment
-geometric_mean(values) = prod(values)^(1/length(values)) # name(args) = result
+geo_mean(values) = prod(values)^(1/length(values)) # name(args) = result
 
-geometric_mean(1:10)
-geometric_mean(rand(10))
+geo_mean(1:10)
+geo_mean(rand(10))
 
 terminal_slope(times, observations) = (observations[end] - observations[end-2]) / (times[end] - times[end-2])
 
