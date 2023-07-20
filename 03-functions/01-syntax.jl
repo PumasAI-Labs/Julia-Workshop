@@ -2,60 +2,66 @@
 ## Powerful and commonly used tool in Julia and other programming languages
 
 ## Multiple lines syntax
-function greet(name) # function name(args)
-    println("Hello, $name") # Manipulate args
+function geo_mean(values) # function name(args)
+    prod(values)^(1/length(values)) # Manipulate args
 end # Watch out: end is required
 
-greet("James")
-greet("Alice") # We have created code that works for anyone
+geo_mean(1:10)
+geo_mean(rand(10)) # We have created code that works for any vector of numbers
+
+### Tip: you can calculate geometric means with the StatsBase package
+using StatsBase
+geomean(1:10)
 
 ### Multiple arguments
-function add(x, y) # Here we have two arguments, and we could add more add(x, y, z, ...)
-    result = x + y
-    return result # The return function indicates what should be the result of calling the function
+function terminal_slope(times, observations) # Here we have two arguments, and we could add more by separating them with commas 
+
+    dy = observations[end] - observations[end-2] # We are using the last and the second to last points to calculate the slope
+    dt = times[end] - times[end-2]
+
+    return dy/dt # The return function indicates what should be the result of calling the function
+
 end
 
-add(2, 3)
-add(1, 10)
+observations = [0.01, 112, 224, 220, 143, 109, 57]
+times = [0, 1, 2, 4, 8, 12, 24]
+
+terminal_slope(times, observations)
 
 ### No arguments
-function hello_world()
-    println("Hello, world!")
-end
-
-hello_world()
+pwd() # Prints the present working directory
 
 ## Compact function assignment
-greet(name) = println("Hello, $name") # name(args) = result
+geo_mean(values) = prod(values)^(1/length(values)) # name(args) = result
 
-greet("James")
-greet("Alice")
+geo_mean(1:10)
+geo_mean(rand(10))
 
-add(x, y) = x + y
+terminal_slope(times, observations) = (observations[end] - observations[end-2]) / (times[end] - times[end-2])
 
-add(2, 3)
-add(1, 10)
-
-f(x) = x^2 # Natural way to define math functions
-
-f(2)
-f(3)
+terminal_slope(times, observations)
 
 ## Return multiple values
-function even_greater_than_10(number)
-    even = iseven(number) # A function that we didn't write
-    greater = number > 10
+using Statistics
 
-    return even, greater # Return multiple values with return1, return2, return3, ...
+function summary_statistics(values)
+
+    min = minimum(values)
+    max = maximum(values)
+    q1 = quantile(values, 0.25)
+    q2 = quantile(values, 0.5)
+    q3 = quantile(values, 0.75)
+
+    return min, max, q1, q2, q3  # Return multiple values with return1, return2, return3, ...
 end
 
-checks = even_greater_than_10(12) # We get a Tuple
+summary = summary_statistics(1:10) # We get a Tuple
 
 # Extract values by indexing the Tuple
-even = checks[1]
-greater = checks[2]
+min = summary[1]
+q2 = summary[4]
 
-## Tip: useful way to unpack multiple values
-even, greater = even_greater_than_10(13)
-even
-greater
+## Tip: a useful way to unpack multiple values
+min, max, q1, q2, q3 = summary_statistics(1:10)
+min
+q2
