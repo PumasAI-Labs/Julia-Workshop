@@ -3,8 +3,7 @@
 # Macros start with @
 @time
 @show
-@doc
-@macroexpand
+@doc@macroexpand
 
 # Using macros
 
@@ -12,9 +11,9 @@
 @time 3 + 2 # shows you how long it takes Julia to calculate 3 + 2
 
 @time begin # time multiple expressions
-    3 + 2
-    6*5
-    4 + 2^6 - 10
+  3 + 2
+  6 * 5
+  4 + 2^6 - 10
 end
 
 @doc println # pulls documentation

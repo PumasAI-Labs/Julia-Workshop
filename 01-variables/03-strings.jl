@@ -3,7 +3,7 @@ include("02-booleans.jl")
 # Strings are created with double quotes
 "Hello, world!"
 
-'Hello, world!' # Watch out: single quotes are reserved for Chars
+# 'Hello, world!' # Watch out: single quotes are reserved for Chars
 'A'
 'B'
 
@@ -22,7 +22,7 @@ name = "Jake"
 string(greeting, ", ", name)
 
 ## using * (same as multiplication)
-greeting*", "*name # Watch out: + doesn't work
+greeting * ", " * name # Watch out: + doesn't work
 
 ## Interpolation
 "$greeting, $name"

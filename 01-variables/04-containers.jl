@@ -7,9 +7,11 @@ mixed = [1, "one", 2, "two"]
 
 # Matrices
 ## Multi-line syntax (using line breaks)
-A = [1 2 3
-     4 5 6
-     7 8 9]
+A = [
+  1 2 3
+  4 5 6
+  7 8 9
+]
 
 ## Single line syntax (using ;)
 A2 = [1 2 3; 4 5 6; 7 8 9]
@@ -40,11 +42,7 @@ A[begin:end, begin:2] # Get all rows, but only the first two columns
 height = Dict([("Alice", 165), ("Bob", 178), ("Charlie", 172)])
 
 ## Pair syntax key => value
-height = Dict(
-    "Alice" => 165,
-    "Bob" => 178,
-    "Charlie" => 172
-)
+height = Dict("Alice" => 165, "Bob" => 178, "Charlie" => 172)
 
 ## Retrieving values
 height["Bob"] # Get Bob's height

@@ -5,15 +5,15 @@ include("02-advanced.jl")
 # We already saw how to constrain argument types
 function AUC(times::Vector, observations::Vector)
 
-    auc = 0
+  auc = 0
 
-    for i in 1:length(times)-1
+  for i = 1:length(times)-1
 
-        auc += (observations[i] + observations[i+1])*(times[i+1] - times[i]) / 2
+    auc += (observations[i] + observations[i+1]) * (times[i+1] - times[i]) / 2
 
-    end
+  end
 
-    return auc
+  return auc
 
 end
 
@@ -22,34 +22,34 @@ AUC(times, observations)
 
 # Suppose we would also like to have something that calculates the AUC for a population
 population = Dict(
-    "SUBJ-1" => [0.01, 112, 224, 220, 143, 109, 57],
-    "SUBJ-2" => [0.01, 78, 168, 148, 119, 97, 48],
-    "SUBJ-3" => [0.01, 54, 100, 91, 73, 56, 32]
+  "SUBJ-1" => [0.01, 112, 224, 220, 143, 109, 57],
+  "SUBJ-2" => [0.01, 78, 168, 148, 119, 97, 48],
+  "SUBJ-3" => [0.01, 54, 100, 91, 73, 56, 32],
 )
 
 AUC(times, population) # Of course, our function won't work here
 
 function AUC_pop(times::Vector, population::Dict)
 
-    auc_values = Dict() # We are creating an empty dictionary to add the results
+  auc_values = Dict() # We are creating an empty dictionary to add the results
 
-    for subject in population
+  for subject in population
 
-        auc = 0
-        observations = subject.second # Get the observations for a given subject
+    auc = 0
+    observations = subject.second # Get the observations for a given subject
 
-        for i in 1:length(times)-1
+    for i = 1:length(times)-1
 
-            auc += (observations[i] + observations[i+1])*(times[i+1] - times[i]) / 2
-
-        end
-
-        subject_id = subject.first
-        auc_values[subject_id] = auc
+      auc += (observations[i] + observations[i+1]) * (times[i+1] - times[i]) / 2
 
     end
 
-    return auc_values
+    subject_id = subject.first
+    auc_values[subject_id] = auc
+
+  end
+
+  return auc_values
 
 end
 
@@ -59,25 +59,25 @@ AUC_pop(times, population)
 ## Multiple dispatch can solve that
 function AUC(times::Vector, population::Dict) # We use the same name, but different argument types
 
-    auc_values = Dict() # We are creating an empty dictionary to add the results
+  auc_values = Dict() # We are creating an empty dictionary to add the results
 
-    for subject in population
+  for subject in population
 
-        auc = 0
-        observations = subject.second # Get the observations for a given subject
+    auc = 0
+    observations = subject.second # Get the observations for a given subject
 
-        for i in 1:length(times)-1
+    for i = 1:length(times)-1
 
-            auc += (observations[i] + observations[i+1])*(times[i+1] - times[i]) / 2
-
-        end
-
-        subject_id = subject.first
-        auc_values[subject_id] = auc
+      auc += (observations[i] + observations[i+1]) * (times[i+1] - times[i]) / 2
 
     end
 
-    return auc_values
+    subject_id = subject.first
+    auc_values[subject_id] = auc
+
+  end
+
+  return auc_values
 
 end
 

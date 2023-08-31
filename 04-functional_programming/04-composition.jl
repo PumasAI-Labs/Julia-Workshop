@@ -11,9 +11,9 @@ my_operation(-2)
 ## More complex example: geometric mean
 x = 1:10
 
-exp(sum(log.(x))/length(x))
+exp(sum(log.(x)) / length(x))
 
-geometric_mean = (exp ∘ (i -> sum(i)/length(i)) ∘ (i -> log.(i))) # Watch out: wrap anonymous functions around parenthesis
+geometric_mean = (exp ∘ (i -> sum(i) / length(i)) ∘ (i -> log.(i))) # Watch out: wrap anonymous functions around parenthesis
 geometric_mean(x)
 
 using StatsBase
@@ -23,5 +23,5 @@ geomean(x) # Check our results
 -2 |> abs |> sqrt |> exp # Opposite order from composition
 
 ## Geometric mean
-x |> (i -> log.(i)) |> (i -> sum(i)/length(i)) |> exp
-x .|> log |> (i -> sum(i)/length(i)) |> exp # You can vectorize the piping operator (.|>)
+x |> (i -> log.(i)) |> (i -> sum(i) / length(i)) |> exp
+x .|> log |> (i -> sum(i) / length(i)) |> exp # You can vectorize the piping operator (.|>)
