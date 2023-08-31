@@ -3,7 +3,7 @@
 # Macros start with @
 @time
 @show
-@doc@macroexpand
+@macroexpand
 
 # Using macros
 
