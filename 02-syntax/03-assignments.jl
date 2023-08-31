@@ -11,11 +11,7 @@ end
 x
 
 ### Single line
-x = begin
-  a = 3
-  b = 2
-  a + b
-end # Not as readable, but more concise
+x = begin a = 3; b = 2; a + b end # Not as readable, but more concise
 
 ## (;) syntax
 x = (a = 3; b = 2; a + b)
