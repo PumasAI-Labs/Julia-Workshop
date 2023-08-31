@@ -3,7 +3,7 @@ include("02-booleans.jl")
 # Strings are created with double quotes
 "Hello, world!"
 
-# 'Hello, world!' # Watch out: single quotes are reserved for Chars
+'Hello, world!' # Watch out: single quotes are reserved for Chars
 'A'
 'B'
 
