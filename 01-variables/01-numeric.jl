@@ -29,8 +29,8 @@ typeof(one_float)
 x + y # Addition
 x - y # Subtraction
 x + one # Can mix integers and floats
-x*y # Multiplication
-x/2 # Division
+x * y # Multiplication
+x / 2 # Division
 x^2 # Exponentiation
 (1 + 2)^3 * 2 + 1 # evaluated in PEMDAS order
 
@@ -39,5 +39,5 @@ sqrt(2)
 √2
 
 ## Other numeric types
-5//37 # Rational
+5 // 37 # Rational
 1 + 2im # Complex

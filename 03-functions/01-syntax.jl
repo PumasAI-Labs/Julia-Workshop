@@ -3,7 +3,7 @@
 
 ## Multiple lines syntax
 function geo_mean(values) # function name(args)
-    prod(values)^(1/length(values)) # Manipulate args
+  prod(values)^(1 / length(values)) # Manipulate args
 end # Watch out: end is required
 
 geo_mean(1:10)
@@ -16,10 +16,10 @@ geomean(1:10)
 ### Multiple arguments
 function terminal_slope(times, observations) # Here we have two arguments, and we could add more by separating them with commas 
 
-    dy = observations[end] - observations[end-2] # We are using the last and the second to last points to calculate the slope
-    dt = times[end] - times[end-2]
+  dy = observations[end] - observations[end-2] # We are using the last and the second to last points to calculate the slope
+  dt = times[end] - times[end-2]
 
-    return dy/dt # The return function indicates what should be the result of calling the function
+  return dy / dt # The return function indicates what should be the result of calling the function
 
 end
 
@@ -32,12 +32,13 @@ terminal_slope(times, observations)
 pwd() # Prints the present working directory
 
 ## Compact function assignment
-geo_mean(values) = prod(values)^(1/length(values)) # name(args) = result
+geo_mean(values) = prod(values)^(1 / length(values)) # name(args) = result
 
 geo_mean(1:10)
 geo_mean(rand(10))
 
-terminal_slope(times, observations) = (observations[end] - observations[end-2]) / (times[end] - times[end-2])
+terminal_slope(times, observations) =
+  (observations[end] - observations[end-2]) / (times[end] - times[end-2])
 
 terminal_slope(times, observations)
 
@@ -46,13 +47,13 @@ using Statistics
 
 function summary_statistics(values)
 
-    min = minimum(values)
-    max = maximum(values)
-    q1 = quantile(values, 0.25)
-    q2 = quantile(values, 0.5)
-    q3 = quantile(values, 0.75)
+  min = minimum(values)
+  max = maximum(values)
+  q1 = quantile(values, 0.25)
+  q2 = quantile(values, 0.5)
+  q3 = quantile(values, 0.75)
 
-    return min, max, q1, q2, q3  # Return multiple values with return1, return2, return3, ...
+  return min, max, q1, q2, q3  # Return multiple values with return1, return2, return3, ...
 end
 
 summary = summary_statistics(1:10) # We get a Tuple

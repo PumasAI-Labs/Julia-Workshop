@@ -1,23 +1,23 @@
 # Functional programming is about creating your programs by applying and composing functions
 
 """
-A function that calculates the terminal slope using the last and 
+A function that calculates the terminal slope using the last and
 the third to last observations
 """
-function terminal_slope(observations; time=[0, 1, 2, 4, 8, 12, 24]) # We are setting default time values
+function terminal_slope(observations; time = [0, 1, 2, 4, 8, 12, 24]) # We are setting default time values
 
-    dy = observations[end] - observations[end-2]
-    dx = time[end] - time[end-2]
+  dy = observations[end] - observations[end-2]
+  dx = time[end] - time[end-2]
 
-    return dy/dx
+  return dy / dx
 
 end
 
 # Now let's suppose we wan't to calculate the terminal slope for a group of subjects
 population = Dict(
-    "SUBJ-1" => [0.01, 112, 224, 220, 143, 109, 57],
-    "SUBJ-2" => [0.01, 78, 168, 148, 119, 97, 48],
-    "SUBJ-3" => [0.01, 54, 100, 91, 73, 56, 32]
+  "SUBJ-1" => [0.01, 112, 224, 220, 143, 109, 57],
+  "SUBJ-2" => [0.01, 78, 168, 148, 119, 97, 48],
+  "SUBJ-3" => [0.01, 54, 100, 91, 73, 56, 32],
 )
 
 ## We could do an array comprehension

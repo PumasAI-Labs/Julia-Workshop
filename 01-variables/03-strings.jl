@@ -22,7 +22,7 @@ name = "Jake"
 string(greeting, ", ", name)
 
 ## using * (same as multiplication)
-greeting*", "*name # Watch out: + doesn't work
+greeting * ", " * name # Watch out: + doesn't work
 
 ## Interpolation
 "$greeting, $name"

@@ -6,11 +6,11 @@ y = 2
 
 # Created with the if-elseif-else keywords
 if x < y # Checks if x is less than y
-    println("x is less than y")
+  println("x is less than y")
 elseif x > y # If x is not less than y, checks if it is greater than y
-    println("x is greater than y")
+  println("x is greater than y")
 else # If none of the above are true
-    println("x is equal to y")
+  println("x is equal to y")
 end # Watch out: don't forget to add the end keyword
 
 ## Try it again
@@ -21,12 +21,12 @@ x = 2
 a = 12.5
 
 if a < 5
-    message = "a is less than 5" # You can do anything inside the if-elseif-else blocks
+  message = "a is less than 5" # You can do anything inside the if-elseif-else blocks
 elseif a < 10 # Equivalent to 5 < x < 10
-    message = "a is less than 10, but greater than 5"
+  message = "a is less than 10, but greater than 5"
 elseif a < 15
-    message = "a is less than 15, but greater than 10"
-# You don't necessarily have to include else (or elseif)
+  message = "a is less than 15, but greater than 10"
+  # You don't necessarily have to include else (or elseif)
 end
 
 println(message)

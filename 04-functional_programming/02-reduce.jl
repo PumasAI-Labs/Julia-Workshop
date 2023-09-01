@@ -19,14 +19,14 @@ Simple function to calculate the AUC  with reduce
 using the trapezoidal rule (https://en.wikipedia.org/wiki/Trapezoidal_rule)
 """
 function AUC(accumulated, i)
-    
-    trapz_area = (obs[i] + obs[i+1])*(times[i+1] - times[i]) / 2
 
-    return accumulated + trapz_area
+  trapz_area = (obs[i] + obs[i+1]) * (times[i+1] - times[i]) / 2
+
+  return accumulated + trapz_area
 
 end
 
-reduce(AUC, 1:length(obs)-1; init=0) # Need to set the accumulated value to 0 at the start
+reduce(AUC, 1:length(obs)-1; init = 0) # Need to set the accumulated value to 0 at the start
 
 ## Common use case: reduce + map
 using Statistics

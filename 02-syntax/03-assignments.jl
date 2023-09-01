@@ -3,9 +3,9 @@
 
 ### Multiple lines (probably the best one)
 x = begin
-    a = 3
-    b = 2
-    a + b
+  a = 3
+  b = 2
+  a + b
 end
 
 x
@@ -20,20 +20,20 @@ x = (a = 3; b = 2; a + b)
 ## Global scope (accesible everywhere)
 c = 2
 
-for i in 1:5
-    println("Printing $c for the $(i)th time") # We can use x inside the for loop
+for i = 1:5
+  println("Printing $c for the $(i)th time") # We can use x inside the for loop
 end
 
 j = 1
 while j <= 10
-    println(j)
-    global j += 1 # global lets us make sure that we are modifying the loop counter
+  println(j)
+  global j += 1 # global lets us make sure that we are modifying the loop counter
 end
 
 ## Local scope
-for i in 1:5
-    local d = 3
-    println("$c + $d = $(c + d)")
+for i = 1:5
+  local d = 3
+  println("$c + $d = $(c + d)")
 end
 
 d # doesn't exist
